@@ -1,0 +1,27 @@
+<div class="breadcrumbs">
+  <a href ng-click="recordsList()">Records</a>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Record: <span ng-if="record.id">{{record.name}} [{{record.number}}]</span></div>
+  <div class="panel-body">
+    <form name="form" role="form" class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="col-md-2 control-label">Name</label>
+        <div class="col-md-8">
+          <input class="form-control" name="name" id="name" ng-model="record.name" maxlength="256">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="number" class="col-md-2 control-label">Number*</label>
+        <div class="col-md-8">
+          <input class="form-control" name="number" id="number" ng-model="record.number" maxlength="13" required>
+        </div>
+      </div>
+      <div class="btn-panel">
+        <button class="btn btn-primary" ng-click="save()" ng-disabled="form.$invalid"><span class="glyphicon glyphicon-save"> Save</span></button>
+        <button class="btn btn-danger" ng-click="delete()" ng-if="record.id"><span class="glyphicon glyphicon-remove"> Delete</span></button>
+      </div>
+    </form>
+  </div>
+</div>

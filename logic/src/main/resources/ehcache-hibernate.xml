@@ -1,0 +1,22 @@
+<ehcache xmlns="http://ehcache.org/ehcache.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://ehcache.org/ehcache.xsd http://ehcache.org/ehcache.xsd" updateCheck="false" name="hibernateCacheManagerVip">
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            maxElementsInMemory="1000"
+            eternal="false"
+            timeToLiveSeconds="0"
+            overflowToDisk="false"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="300"
+            memoryStoreEvictionPolicy="LRU"
+            />
+
+    <cache name="read.only"
+           maxElementsInMemory="1000"
+           eternal="true"
+           overflowToDisk="false"/>
+
+
+</ehcache>

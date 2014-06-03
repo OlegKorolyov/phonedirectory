@@ -1,0 +1,100 @@
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  /* prevent text from resizing on Ctrl-+ */
+  /*-webkit-text-size-adjust: none;*/
+}
+html {
+  background-color: #f2f2f2;
+}
+body {
+  color: #506168;
+  background-color: transparent;
+}
+h1 {
+  margin: 0;
+  font-size: 48px;
+  text-align: center;
+  text-shadow: 0 0 1px rgba(80, 97, 104, 0.3); /* to make it looks smooth like in PSD */
+}
+h4 {
+  font-size: 20px;
+  text-align: center;
+}
+input {
+  color: #cfcfcf;
+  outline: none; /* webkit glow turn off */
+  border: 1px solid #e2e2e2;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #cfcfcf;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #cfcfcf;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #cfcfcf;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #cfcfcf;
+}
+textarea {
+  outline: none; /* webkit glow turn off */
+  border: 1px solid #e2e2e2;
+}
+input:focus,
+textarea:focus {
+  color: #506168;
+  border-color: #506168;
+}
+input.notEmpty {
+  color: #506168;
+}
+input.notEmpty:focus {
+  border-color: #506168;
+}
+input.entered{
+  color: #506168;
+}
+input[type="file"] {
+  cursor: pointer;
+}
+
+.full-width {
+  width: 100%;
+}
+.s_hide {
+  height: 0;
+  display:none;
+  overflow: hidden;
+}
+.clear {
+  clear: both;
+}
+
+.container .header, .container .footer {
+  padding: 20px 30px 20px 30px;
+  background-color: #dcdcdc;
+}
+
+.container .header {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.btn-panel {
+  padding: 20px 0 20px 0;
+}
+
+.breadcrumbs {
+  padding: 20px;
+}
+
+.filter {
+  padding-bottom: 20px;
+}
+
+form .form-control.ng-invalid-required {
+  background-color: coral;
+  color: maroon;
+}

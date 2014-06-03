@@ -1,0 +1,32 @@
+<div class="btn-panel">
+  <button class="btn btn-primary" ng-click="addRecord()"><span class="glyphicon glyphicon-plus"> Add Record</span></button>
+</div>
+
+<div class="filter"><form class="form-inline" role="form"> 
+  <div class="row"> 
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="filterSearch" class="sr-only">Search</label> 
+        <input id="filterSearch" class="form-control" ng-model="filter.search" placeholder="Search">
+        </div>
+      </div> 
+    </div>
+  </form>
+</div>
+
+<div>
+  <table class="table">
+    <thead>
+      <th>Name</th>
+      <th>Number</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="r in records">
+        <td ><a href ng-click="view(r.id)">{{r.name}}</a></td>
+        <td>{{r.number}}</td>
+        <td class="col-md-1"><button class="btn-xs btn-danger" ng-click="deleteRecord($index)"><span class="glyphicon glyphicon-remove"></span></button> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
